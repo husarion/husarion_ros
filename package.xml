@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rosserial_husarion</name>
+  <version>0.0.1</version>
+  <description>The rosserial_husarion package is modified version of rosserial_python.</description>
+
+  <maintainer email="lukasz.mitka@husarion.com">Łukasz Mitka</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>rossserial</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>rosserial</exec_depend>
+</package>
