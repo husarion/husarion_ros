@@ -102,3 +102,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+*.ninja*
+.vscode
+CMakeFiles
+catkin*
+devel
+build
+gtest
+CMakeCache.txt
+*.cmake
+
