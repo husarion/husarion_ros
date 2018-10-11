@@ -1,4 +1,4 @@
 <launch>
-    <node pkg="rosserial_husarion" type="wifi.py" name="serial_bridge" output="screen">
+    <node pkg="rosserial_husarion" type="wifi.py" name="wifi_publisher" output="screen">
     </node>
 </launch> 
