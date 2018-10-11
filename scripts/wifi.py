@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import subprocess
 import time
 from pythonwifi.iwlibs import Wireless
@@ -51,7 +52,7 @@ def getWiFiList():
     return wifiList
 
 
-def talker():
+def wifi_main():
     wifi_pub = rospy.Publisher('wifi_status', DiagnosticArray, queue_size=1)
     rospy.init_node('wifi_status')
     rate = rospy.Rate(2)  # 10hz
@@ -83,6 +84,6 @@ def talker():
 
 if __name__ == '__main__':
     try:
-        talker()
+        wifi_main()
     except rospy.ROSInterruptException:
         pass
