@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="rosserial_husarion" type="serial_bridge.py" name="serial_bridge" output="screen">
+    <node pkg="husarion_ros" type="serial_bridge.py" name="serial_bridge" output="screen">
         <param name="port" value="/dev/ttyS1" />
         <param name="baud" value="500000" />
     </node>

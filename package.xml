@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rosserial_husarion</name>
+  <name>husarion_ros</name>
   <version>0.0.1</version>
-  <description>The rosserial_husarion package is modified version of rosserial_python.</description>
+  <description>The husarion_ros package is containing nodes specific to Husarion robots.</description>
 
   <maintainer email="lukasz.mitka@husarion.com">Łukasz Mitka</maintainer>
   <license>MIT</license>
