@@ -58,7 +58,6 @@ def wifi_main():
     rate = rospy.Rate(2)  # 10hz
     diagArrayWiFi = DiagnosticArray()
     diagArrayWiFi.header.frame_id = "robot_name"
-    diagStatusWiFi = DiagnosticStatus()
     kv = KeyValue()
     rospy.loginfo("wifi_status publisher node started")
 
@@ -66,6 +65,7 @@ def wifi_main():
         diagArrayWiFi.header.stamp = rospy.get_rostime()
         del(diagArrayWiFi.status[:])
         for wifi_status in getWiFiList():
+            diagStatusWiFi = DiagnosticStatus()
             del(diagStatusWiFi.values[:])
             diagStatusWiFi.level = DiagnosticStatus.OK
             diagStatusWiFi.name = wifi_status[1]
