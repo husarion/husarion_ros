@@ -1,12 +1,16 @@
-# rosserial_husarion
+# husarion_ros
 
-The rosserial_husarion package is modified version of rosserial_python.
+Husarion ros package contains some nodes specific for Husarion robots.
 
-# WiFi status
+## Serial bridge
+
+The serial_bridge.py script is modified version of rosserial_python.
+
+## WiFi status
 
 This simple node gets WiFi signal strength  of currently connected networks and publish it as `diagnostic_msgs/DiagnosticArray`
 
-## How to use
+### How to use
 
 Node requires few python dependencies, install them with:
 
