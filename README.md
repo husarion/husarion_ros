@@ -21,5 +21,5 @@ pip install python-wifi ifparser
 Run as standard ROS node:
 
 ```
-rosrun rosserial_husarion wifi.py
+rosrun husarion_ros wifi.py
 ```
