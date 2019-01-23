@@ -113,3 +113,6 @@ gtest
 CMakeCache.txt
 *.cmake
 
+Husarion_SDK-stable
+Husarion-SDK-docs
+serial_diag
