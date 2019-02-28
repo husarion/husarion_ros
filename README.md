@@ -8,6 +8,8 @@ There are four main launch files with names beginnig `rosbot_drivers`, these are
 
 - `rosbot_drivers.launch` is for ROSbot 2.0 connected to [cloud.husarion.com](cloud.husarion.com)
 - `rosbot_driver_ofline.launch` is for ROSbot 2.0 with [disabled cloud connection](https://husarion.com/tutorials/other-tutorials/how-to-use-core2-ros-local-serial-offline/).
+- `rosbot_drivers_pro.launch` is for ROSbot 2.0 PRO connected to [cloud.husarion.com](cloud.husarion.com)
+
 
 ## WiFi status
 
