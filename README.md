@@ -13,7 +13,7 @@ There are four main launch files with names beginnig `rosbot_drivers`, these are
 
 ## WiFi status
 
-This simple node gets WiFi signal strength  of currently connected networks and publish it as `diagnostic_msgs/DiagnosticArray`
+The `wifi.py` script is simple node which gets WiFi signal strength  of currently connected networks and publish it as `diagnostic_msgs/DiagnosticArray`.
 
 ### How to use
 
