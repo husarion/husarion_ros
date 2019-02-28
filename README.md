@@ -2,9 +2,12 @@
 
 Husarion ros package contains some nodes specific for Husarion robots.
 
-## Serial bridge
+## Contents
 
-The serial_bridge.py script is modified version of rosserial_python.
+There are four main launch files with names beginnig `rosbot_drivers`, these are for basic ROSbot controle, depending on ROSbot version and configuration.
+
+- `rosbot_drivers.launch` is for ROSbot 2.0 connected to [cloud.husarion.com](cloud.husarion.com)
+- `rosbot_driver_ofline.launch` is for ROSbot 2.0 with [disabled cloud connection](https://husarion.com/tutorials/other-tutorials/how-to-use-core2-ros-local-serial-offline/).
 
 ## WiFi status
 
