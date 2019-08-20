@@ -10,6 +10,9 @@ int32_t tile_width;
 int32_t tile_height;
 std::string parent_frame;
 std::string child_frame;
+bool draw_robot;
+bool publish_full_map;
+bool publish_map_tile;
 
 void map_zoom_callback(const std_msgs::Int16 &scale)
 {
@@ -26,10 +29,13 @@ int main(int argc, char **argv)
   n.param<int32_t>("tile_height", tile_height, INITIAL_TILE_SIZE_Y);
   n.param<std::string>("parent_frame", parent_frame, "/map");
   n.param<std::string>("child_frame", child_frame, "/base_link");
+  n.param<bool>("draw_robot", draw_robot, false);
+  n.param<bool>("publish_full_map", publish_full_map, true);
+  n.param<bool>("publish_map_tile", publish_map_tile, true);
 
   ros::Rate loop_rate(50);
   ROS_INFO("Init MapAsImageProvider object");
-  map_image_provider = new MapAsImageProvider(n, tile_width, tile_height);
+  map_image_provider = new MapAsImageProvider(n, tile_width, tile_height, draw_robot, publish_full_map, publish_map_tile);
   ros::Subscriber map_zoom_sub = n.subscribe("/map_zoom", 1, map_zoom_callback);
   tf::TransformListener listener;
   tfScalar yaw, pitch, roll;
@@ -52,8 +58,15 @@ int main(int argc, char **argv)
     }
 
     loop_rate.sleep();
-    map_image_provider->publishFullMap();
-    map_image_provider->publishMapTile();
+    if (publish_full_map)
+    {
+      map_image_provider->publishFullMap();
+    }
+
+    if (publish_map_tile)
+    {
+      map_image_provider->publishMapTile();
+    }
   }
   return 0;
 }

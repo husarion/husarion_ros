@@ -21,6 +21,7 @@ class MapAsImageProvider
 {
 private:
     ros::NodeHandle node_handle;
+    sensor_msgs::Image tmp_image_data;
     image_transport::ImageTransport *image_transport_;
     image_transport::Publisher image_transport_publisher_full_;
     image_transport::Publisher image_transport_publisher_tile_;
@@ -47,9 +48,12 @@ private:
     void mapUpdate(const nav_msgs::OccupancyGridConstPtr &map);
     void tileUpdate();
     int8_t getCellOccupancy(float x, float y);
+    bool print_robot_indicator;
+    bool enable_full_map_publisher;
+    bool enable_map_tile_publisher;
 
 public:
-    MapAsImageProvider(ros::NodeHandle nh, uint16_t tile_width = INITIAL_TILE_SIZE_X, uint16_t tile_height = INITIAL_TILE_SIZE_Y);
+    MapAsImageProvider(ros::NodeHandle nh, uint16_t tile_width = INITIAL_TILE_SIZE_X, uint16_t tile_height = INITIAL_TILE_SIZE_Y, bool robot_indicator = true, bool full_map = true, bool map_tile = true);
     ~MapAsImageProvider();
     void publishFullMap(bool force = false);
     void publishMapTile(bool force = false);
