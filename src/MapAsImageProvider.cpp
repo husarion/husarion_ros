@@ -110,7 +110,7 @@ void MapAsImageProvider::mapUpdate(const nav_msgs::OccupancyGridConstPtr &map)
     if (enable_full_map_publisher)
     {
         // resize cv image if it doesn't have the same dimensions as the map
-        if ((cv_img_full_.image.rows != map->info.height) && (cv_img_full_.image.cols != map->info.width))
+        if ((cv_img_full_.image.rows != map->info.height) || (cv_img_full_.image.cols != map->info.width))
         {
             cv_img_full_.image = cv::Mat(map->info.height, map->info.width, CV_8U);
         }
