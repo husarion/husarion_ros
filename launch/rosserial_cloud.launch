@@ -1,5 +1,0 @@
-<launch>
-
-    <node pkg="husarion_ros" type="serial_bridge.sh" name="serial_bridge" output="screen"/>
-
-</launch> 

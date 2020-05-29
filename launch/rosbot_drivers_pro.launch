@@ -4,6 +4,8 @@
     
     <include file="$(find rplidar_ros)/launch/rplidar_a3.launch"></include>
     
-    <include file="$(find husarion_ros)/launch/rosserial_cloud.launch"></include>
+    <include file="$(find rosbot_ekf)/launch/all.launch">
+        <arg name="rosbot_pro" value="true"/>
+    </include>
 
 </launch>

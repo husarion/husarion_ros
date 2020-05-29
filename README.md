@@ -4,12 +4,10 @@ Husarion ros package contains some nodes specific for Husarion robots.
 
 ## Contents
 
-There are four main launch files with names beginnig `rosbot_drivers`, these are for basic ROSbot controle, depending on ROSbot version and configuration.
+There are two main launch files with names beginnig `rosbot_drivers`, these are for basic ROSbot control, depending on ROSbot version and configuration.
 
-- `rosbot_drivers.launch` is for ROSbot 2.0 connected to [cloud.husarion.com](cloud.husarion.com)
-- `rosbot_driver_ofline.launch` is for ROSbot 2.0 with [disabled cloud connection](https://husarion.com/tutorials/other-tutorials/how-to-use-core2-ros-local-serial-offline/).
-- `rosbot_drivers_pro.launch` is for ROSbot 2.0 PRO connected to [cloud.husarion.com](cloud.husarion.com)
-- `rosbot_driver_pro_offline.launch` is for ROSbot 2.0 PRO with [disabled cloud connection](https://husarion.com/tutorials/other-tutorials/how-to-use-core2-ros-local-serial-offline/).
+- `rosbot_drivers.launch` is for ROSbot 2.0
+- `rosbot_drivers_pro.launch` is for ROSbot 2.0 PRO
 
 ## WiFi status
 
